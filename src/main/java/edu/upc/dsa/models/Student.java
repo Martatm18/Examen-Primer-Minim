@@ -6,6 +6,8 @@ public class Student
     private String id;     // Aquest és l'identificador únic de l'alumne
     private String name;   // Aquest és el nom de l'alumne
 
+    public Student() {} //Constructor buit necessari per JSON.
+
     // Constructor per inicialitzar un nou alumne
     public Student(String id, String name)
     {
@@ -13,13 +15,29 @@ public class Student
         this.name = name;
     }
 
-    // Mètodes Getter per consultar les dades
-    public String getId() //Mètode Getter per consultar l'id
+    // Mètodes Getter i Setter per consultar i modificar la informació de l'operació
+
+    //Mètode per consultar l'id de l'estudiant.
+    public String getId()
     {
         return id;
     }
-    public String getName() //Mètode Getter per consultar el nom
+
+    //Mètode per assignar l'id de l'estudiant.
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+
+    //Mètode per consultar el nom de l'estudiant
+    public String getName()
     {
         return name;
+    }
+
+    //Mètode per assignar el nom de l'estudiant
+    public void setName(String name)
+    {
+        this.name = name;
     }
 }

@@ -7,30 +7,56 @@ public class Operation
     private String expression;   // És l'expressió matemàtica
     private Double result;       // És el resultat del càlcul
 
+    public Operation() {} //Constructor buit necessari per JSON.
+
     // Constructor per registrar una nova operació
-    public Operation(String studentId, String instituteId, String expression) {
+    public Operation(String studentId, String instituteId, String expression)
+    {
         this.studentId = studentId;
         this.instituteId = instituteId;
         this.expression = expression;
     }
 
-    // Mètodes Getter per consultar la informació de l'operació
-    public String getStudentId() //Mètode Getter per consultar l'id de l'estudiant
+    // Mètodes Getter i Setter per consultar i modificar la informació de l'operació
+
+    //Mètode per consultar l'id de l'estudiant
+    public String getStudentId()
     {
         return studentId;
     }
 
-    public String getInstituteId() //Mètode Getter per consultar l'id de l'institut
+    //Mètode que assigna l'ID de l'alumne.
+    public void setStudentId(String studentId)
+    {
+        this.studentId = studentId;
+    }
+
+    //Mètode per consultar l'id de l'institut
+    public String getInstituteId()
     {
         return instituteId;
     }
 
-    public String getExpression() //Mètode Getter per consultar l'expressió matemàtica
+    // Mètode per assignar l'id de l'institut associat a aquesta operació.
+    public void setInstituteId(String instituteId)
+    {
+        this.instituteId = instituteId;
+    }
+
+    //Mètode per consultar l'expressió matemàtica
+    public String getExpression()
     {
         return expression;
     }
 
-    public Double getResult() //Mètode Getter per consultar el resultat del càlcul
+    //Mètode que permet modificar l'expressió
+    public void setExpression(String expression)
+    {
+        this.expression = expression;
+    }
+
+    //Mètode per consultar el resultat del càlcul
+    public Double getResult()
     {
         return result;
     }

@@ -7,6 +7,8 @@ public class Institute
     private String name;           // Aquest és el nom de l'institut
     private int numOperations;     // Això és el comptador acumulat d'operacions realitzades
 
+    public Institute() {} //Constructor buit necessari per JSON.
+
     // Constructor per inicialitzar l'institut
     public Institute(String id, String name)
     {
@@ -15,18 +17,42 @@ public class Institute
         this.numOperations = 0; // Començarem amb zero operacions
     }
 
-    // Mètodes Getter per consultar les dades
-    public String getId() //Mètode Getter per consultar l'id
+    // Mètodes Getter i Setter per consultar i modificar la informació de l'operació
+
+    //Mètode per consultar l'id de l'institut
+    public String getId()
     {
         return id;
     }
-    public String getName() //Mètode Getter per consultar el nom
+
+    //Mètode que assigna l'identificador únic de l'institut
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+
+    //Mètode per consultar el nom
+    public String getName()
     {
         return name;
     }
-    public int getNumOperations() //Mètode Getter per consultar el numero d'operacions
+
+    //Mètode que assigna el nom de l'institut
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    //Mètode per consultar el nombre d'operacions
+    public int getNumOperations()
     {
         return numOperations;
+    }
+
+    //Mètode que assigna el nombre d'operacions de forma manual.
+    public void setNumOperations(int numOperations)
+    {
+        this.numOperations = numOperations;
     }
 
     // Mètode per incrementar en una unitat el comptador d'operacions de l'institut.
